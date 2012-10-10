@@ -1,0 +1,109 @@
+/* Basic Styles (Colour, Type, etc.) */
+
+html {
+	font-style: "Helvetica Neue", Helvetica, serif;
+	font-size: @base-size;
+	line-height: @line;
+}
+
+body {
+	background-color: @bg;
+	color: @text; 
+}
+
+a {
+	text-decoration: none;
+	color: @highlight;
+	border-bottom: 1px solid @sub;
+	&:hover {
+		color: @highlight2;
+		border-color: @highlight2;
+		.candy-trans;
+	}
+}
+
+h1 {
+	margin: 0;
+	font-size: 3rem;
+	line-height: 4rem;
+}
+
+h2 {
+	margin: 0;
+	font-size: @line;
+	line-height: 2rem;
+}
+
+h3 {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+#content p {
+	margin-bottom: @line;
+}
+
+/* Site Header */
+
+#site-title {
+	a {
+		color: @text;
+		.hide-link;
+	}	
+}
+
+#tagline {
+	margin-left: 1rem;
+	font-size: 1.3rem;
+	font-style: italic;
+}
+
+/* Navigation */
+
+nav {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline;
+			font-size: 1.2rem;
+			margin-right: 0.5rem;
+			a {
+				border: none;
+			}
+		}
+	}
+}
+
+/* Podcast Episodes */
+
+.episode {
+	.header {
+		.title {
+			a {
+				border: none;
+				span {
+					color: @text;
+				}
+			}
+		}
+		.meta-info {
+			color: @sub;
+			.date {
+				&:after{content: " | Dabei: "}
+			}
+			.crew {
+				a {
+					text-decoration: none;
+					color: @sub;
+					.itemized;
+					.hide-link;
+				}
+			}
+		}
+	}
+}
