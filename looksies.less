@@ -88,16 +88,18 @@ nav {
 				border: none;
 				span {
 					color: @text;
+					&:after{ content: ": "}
 				}
 			}
 		}
 		.meta-info {
+			margin-left: 1rem;
 			color: @sub;
-			.id {
-
+			.id { // wohoooo unicoooode!
+				&:after{content: " \2014\2002 ";}
 			}
 			.date {
-				&:after{content: " | Dabei: "}
+				&:after{content: " \2014\2002 Dabei: "}
 			}
 			.crew {
 				a {
