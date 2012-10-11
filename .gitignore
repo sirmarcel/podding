@@ -1,5 +1,5 @@
-*.css
-*.html
+
+
 css/*
 .DS_Store
 *.sublime*
