@@ -1,7 +1,12 @@
+html, body {
+	height: 100%;
+}
+
 #wrapper {
-		margin: 0 auto;
+		height: 100%;
+		margin: 0;
 		padding: @line 0;
-		width: 720px;
+		width: 820px;
 	@media all and (max-width: 799px) 	{
 		width: 90%;
 		padding: @line 5%;
@@ -9,16 +14,25 @@
 	
 }
 
-header {
-	clear: both;
+#sidebar {
+	position: fixed;
+	width: 249px;
+	float: left;
+	padding-left: 20px;
 }
 
-nav {
-	clear: both;
-	margin: @line 0;
+	header {
+		clear: both;
+	}
+
+	nav {
+		clear: both;
+		margin: @line 0;
 }
 
 #content {
+	width: 530px;
+	float: right;
 	.episode {
 		margin-bottom: @line;
 	}

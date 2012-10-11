@@ -6,19 +6,32 @@ html
 
 	body
 		#wrapper
-			header
-				h1#site-title: a href="/" podding
-				p#tagline delicious podcasting
-				
-				nav
-					ul
-						li: a href="" home
-						li: a href="" info
-						li: a href="" crew
-						li: a href="" abo
-						li: a href="" feedback
+			#sidebar
+				header
+					h1#site-title: a href="/" podding
+					p#tagline delicious podcasting
+					
+					nav
+						ul
+							li: a href="" home
+							li: a href="" info
+							li: a href="" crew
+							li: a href="" abo
+							li: a href="" feedback
+				#sidebar-content 
+					p Retinacast ist ein Podcast &uuml;ber Fernsehserien, der alle drei Wochen donnerstags erscheint. In jeder Ausgabe stellen wir eine bestimmte Serie vor.
 
 			#content
+				.episode-planned.RTC
+					p
+						span.date N&auml;chsten Donnerstag
+						span.show-title Retinacast
+				.episode-planned.RTN
+					p
+						span.date N&auml;chsten Sonntag
+						span.show-title Live-Sendung Retinauten
+						
+								
 				.episode.RTN
 					.header
 						h2.title: a.title-link href=""
@@ -41,6 +54,24 @@ html
 					.header
 						h2.title: a.title-link href=""
 							| <span>Retinacast</span>Inspector Spacetime
+						p.meta-info
+							span.id RTC S03E04
+							span.date 5.10.2010
+							span.crew
+								a.crew-member href="" Phil
+								a.crew-member href="" Chef
+								a.crew-member href="" Pfleidi
+								a.crew-member href="" Lukas
+					.content
+						div.desciption
+							p
+								| My cake hole was so full of ramrod and love piss, the baby gravy was sliming down my chin and onto my mammaries. After having my Quimcy, M.E. fucked, he then proceeded to thrust my turd-herder. He munched on my fishy flaps, even though I'd had my redwings for the best part of a week.
+							a.more-link href="" Read on, my dear.
+
+					.episode.RTC
+					.header
+						h2.title: a.title-link href=""
+							| <span>Retinacast</span>House
 						p.meta-info
 							span.id RTC S03E04
 							span.date 5.10.2010

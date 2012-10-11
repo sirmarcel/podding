@@ -42,8 +42,14 @@ p {
 	margin: 0;
 }
 
-#content p {
+.content p {
 	margin-bottom: @line;
+}
+
+/* Side bar */
+
+#sidebar {
+	border-right: 1px solid @sub;
 }
 
 /* Site Header */
@@ -83,6 +89,7 @@ nav {
 
 .episode {
 	.header {
+		margin-bottom: @line;
 		.title {
 			a {
 				border: none;
@@ -112,3 +119,15 @@ nav {
 		}
 	}
 }
+
+	/* Planned Episodes from the future! */
+	
+	.episode-planned {
+		color: @text2;
+		p {
+			margin: 0;
+		}
+		.date { 
+			&:after{content: ": "}
+		}
+	}
