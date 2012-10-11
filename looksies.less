@@ -62,7 +62,7 @@ p {
 #sidebar {
 	border: none;
 	@media all and (min-width: @break1) 	{
-		border-right: 1px solid @sub;
+	
 	}
 }
 
@@ -154,6 +154,11 @@ nav {
 
 	/* Planned Episodes from the future! */
 	
+	#planned-episodes, #live-episodes {
+		margin-bottom: @line;
+		border-bottom: 1px solid @sub;
+	}
+
 	.episode-planned {
 		.header {
 			.episode-icon {

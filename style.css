@@ -512,9 +512,7 @@ p {
   border: none;
 }
 @media all and (min-width: 799px) {
-  #sidebar {
-    border-right: 1px solid #777777;
-  }
+  
 }
 /* Site Header */
 #site-title a {
@@ -640,6 +638,11 @@ nav ul li a {
   margin-left: 40px;
 }
 /* Planned Episodes from the future! */
+#planned-episodes,
+#live-episodes {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #777777;
+}
 .episode-planned .header .title a {
   color: #e16d19;
 }
