@@ -8,8 +8,8 @@ html
 		#wrapper
 			#sidebar
 				header
-					h1#site-title: a href="/" podding
-					p#tagline delicious podcasting
+					h1#site-title: a href="/" retinacast
+					p#tagline der podcast f&uuml;r's auge
 					
 					nav
 						ul
@@ -22,18 +22,31 @@ html
 					p Retinacast ist ein Podcast &uuml;ber Fernsehserien, der alle drei Wochen donnerstags erscheint. In jeder Ausgabe stellen wir eine bestimmte Serie vor.
 
 			#content
-				.episode-planned.RTC
-					p
-						span.date N&auml;chsten Donnerstag
-						span.show-title Retinacast
-				.episode-planned.RTN
-					p
-						span.date N&auml;chsten Sonntag
-						span.show-title Live-Sendung Retinauten
-						
+				.episode.episode-planned.RTC
+					.header
+						a.episode-icon 
+							img.calendar src="images/icon-calendar.png" width="16px" height="16px" alt="episode planned"
+						h3.title: a.title-link href=""
+							| <span>Geplant</span>Pilotenpr&uuml;fung
+						p.meta-info
+							span.id PP18
+							span.date 9.10.2010
+				.episode.episode-planned.RTN
+					.header
+						a.episode-icon 
+							img.calendar src="images/icon-calendar.png" width="16px" height="16px" alt="episode planned"
+						h3.title: a.title-link href=""
+							| <span>Geplant</span>Retinauten
+						p.meta-info
+							span.id RTN002
+							span.date 7.10.2010 um 19.00 Uhr
+							span.live-info: a href="" Live-Stream
+							
 								
 				.episode.RTN
 					.header
+						a.episode-icon 
+							img.play src="images/icon-play.png" width="32px" height="32px"
 						h2.title: a.title-link href=""
 							| <span>Retinauten</span>Zombies im Popfkornkino
 						p.meta-info
@@ -52,6 +65,8 @@ html
 
 				.episode.RTC
 					.header
+						a.episode-icon 
+							img.play src="images/icon-play.png" width="32px" height="32px" alt="play episode"
 						h2.title: a.title-link href=""
 							| <span>Retinacast</span>Inspector Spacetime
 						p.meta-info
@@ -70,6 +85,8 @@ html
 
 					.episode.RTC
 					.header
+						a.episode-icon 
+							img.play src="images/icon-play.png" width="32px" height="32px" alt="play episode"
 						h2.title: a.title-link href=""
 							| <span>Retinacast</span>House
 						p.meta-info

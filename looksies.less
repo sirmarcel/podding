@@ -90,6 +90,17 @@ nav {
 .episode {
 	.header {
 		margin-bottom: @line;
+		.episode-icon {
+			float: left;
+			width: 40px;
+			.hide-link;
+			img.play {
+				margin-left: -7px;
+			}
+			img.calendar {
+				margin-top: 3px;
+			}
+		}
 		.title {
 			a {
 				border: none;
@@ -102,13 +113,17 @@ nav {
 		.meta-info {
 			margin-left: 1rem;
 			color: @sub;
+			a {
+					.hide-link;
+				}
 			.id { // wohoooo unicoooode!
-				&:after{content: " \2014\2002 ";}
+				
 			}
 			.date {
-				&:after{content: " \2014\2002 Dabei: "}
+				&:before{content: " \2014\2002 ";}
 			}
 			.crew {
+				&:before{content: " \2014\2002 Dabei: "}
 				a {
 					text-decoration: none;
 					color: @sub;
@@ -116,18 +131,31 @@ nav {
 					.hide-link;
 				}
 			}
+			.live-info {
+				&:before{content: " \2014\2002 ";}
+			}
 		}
 	}
+	.content {
+			margin-left: 40px;
+		}
 }
 
 	/* Planned Episodes from the future! */
 	
 	.episode-planned {
-		color: @text2;
-		p {
-			margin: 0;
-		}
-		.date { 
-			&:after{content: ": "}
+		.header {
+			.episode-icon {
+				
+			}
+			.title {
+				a { 
+					color: @highlight-less;
+					span { color: @text-less;}
+				}
+			}
+			.meta-info {
+				font-size: 0.8rem;
+			}
 		}
 	}
