@@ -637,9 +637,12 @@ nav ul li a {
 .episode .content {
   margin-left: 40px;
 }
-/* Planned Episodes from the future! */
-#planned-episodes,
+/* Live Episodes */
 #live-episodes {
+  margin-bottom: 3rem;
+}
+/* Planned Episodes from the future! */
+#planned-episodes {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #777777;
 }
