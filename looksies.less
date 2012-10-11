@@ -49,7 +49,10 @@ p {
 /* Side bar */
 
 #sidebar {
-	border-right: 1px solid @sub;
+	border: none;
+	@media all and (min-width: @break1) 	{
+		border-right: 1px solid @sub;
+	}
 }
 
 /* Site Header */
@@ -88,12 +91,13 @@ nav {
 /* Podcast Episodes */
 
 .episode {
+	margin-bottom: @line;
 	.header {
 		margin-bottom: @line;
 		.episode-icon {
 			float: left;
 			width: 40px;
-			.hide-link;
+			.hide-link-hardcore;
 			img.play {
 				margin-left: -7px;
 			}
@@ -111,7 +115,7 @@ nav {
 			}
 		}
 		.meta-info {
-			margin-left: 1rem;
+			margin-left: 40px;
 			color: @sub;
 			a {
 					.hide-link;
@@ -152,6 +156,9 @@ nav {
 				a { 
 					color: @highlight-less;
 					span { color: @text-less;}
+					&:hover {
+						color: @highlight2;
+					}
 				}
 			}
 			.meta-info {

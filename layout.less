@@ -3,25 +3,42 @@ html, body {
 }
 
 #wrapper {
-		height: 100%;
+	height: 100%;
+	width: 90%;
+	max-width: 600px;
+	margin: @line auto;
+	@media all and (min-width: @break1) 	{
 		margin: 0;
-		padding: @line 0;
-		width: 820px;
-	@media all and (max-width: 799px) 	{
-		width: 90%;
-		padding: @line 5%;
-		}
-	
+		padding: @line 2.5%;
+		width: 95%;
+		max-width: 1200px;
+	}
 }
 
 #sidebar {
-	position: fixed;
-	width: 249px;
-	float: left;
-	padding-left: 20px;
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	#sidebar-content {
+		display: none;
+	}
+	@media all and (min-width: @break1) {
+		position: fixed;
+		width: 30%;
+		max-width: 360px;
+		float: left;
+		padding-right: 2.5%;
+		#sidebar-content {
+			display: block;
+		}
+	}
 }
 
 	header {
+		text-align: center;
+		@media all and (min-width: @break1) 	{
+			text-align: left;
+		}
 		clear: both;
 	}
 
@@ -31,9 +48,12 @@ html, body {
 }
 
 #content {
-	width: 530px;
-	float: right;
-	.episode {
-		margin-bottom: @line;
+	width: 100%;
+	@media all and (min-width: @break1) 	{
+		width: 62.5%;
+		float: right;
+		.episode {
+			margin-bottom: @line;
+		}
 	}
 }
