@@ -2,4 +2,12 @@ Hello there.
 
 Nothing to see here, move along.
 
-[Preview]( http://htmlpreview.github.com/?https://github.com/sirmarcel/podding/master/index.html )
+There is a small sinatra app for testing. So you're gonna need to run
+
+	gem install sinatra slim less sinatra-contrib
+
+to get your everything working and
+	
+	ruby podding.rb
+
+for testing (defaults to localhost:4567)
