@@ -8,6 +8,7 @@
 
 	body {
 		background-color: @bg;
+		// background-image: url('images/grid.png'); // OCD Mode
 		color: @text; 
 	}
 
@@ -36,17 +37,19 @@
 	h1 {
 		margin: 0;
 		font-size: 3rem;
-		line-height: 4rem;
+		line-height: 3*@line;
 	}
 
 	h2 {
 		margin: 0;
-		font-size: @line;
-		line-height: 2rem;
+		font-size: 1.5rem;
+		line-height: 1.5*@line;
 	}
 
 	h3 {
 		margin: 0;
+		font-size: 1.2rem;
+		line-height: @line;
 	}
 
 	.text-content h3 {
@@ -64,19 +67,20 @@
 /* Generic Styles (stuff that reappears again and again) */
 
 	.title {
-				a {
-					border: none;
-					span {
-						color: @text;
-						&:after{ content: ": "}
-					}
-				}
+		a {
+			border: none;
+			span {
+				color: @text;
+				&:after{ content: ": "}
 			}
+		}
+	}
 
 	/* Sidebar (which is the header and the actual sidebar) */
 		/* Site Header */
 
 		#site-title {
+
 			a {
 				color: @text;
 				.hide-link;
@@ -85,6 +89,7 @@
 
 		#tagline {
 			font-size: 1.3rem;
+			line-height: 2*@line;
 			font-style: italic;
 			@media all and (min-width: @break1) 	{
 				margin-left: 1rem;
@@ -94,6 +99,7 @@
 		/* Navigation */
 
 		nav {
+			height: @line;
 			ul {
 				.inline-list;
 				margin: 0;
@@ -230,8 +236,9 @@
 
 	.page {
 		.title {
-			margin-bottom: @line;
+			margin-bottom: 1.5*@line;
 		}
+
 	}
 
 	/* Crew Page */
