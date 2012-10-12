@@ -134,18 +134,18 @@
 	/* Podcast Episodes */
 	.episode-list {
 		.more-link {			
+			color: @text-less;
+			.hide-link-hardcore;
+			img {
+				float: left;
+			}
+			span {
+				margin-left: 24px;
 				color: @text-less;
-				.hide-link-hardcore;
-				img {
-					float: left;
-				}
-				span {
-					margin-left: 24px;
-					color: @text-less;
-					&:hover {
-								color: @highlight2;
-							}
-				}
+				&:hover {
+							color: @highlight2;
+						}
+			}
 		}
 	}
 
@@ -165,7 +165,7 @@
 				a {
 						.hide-link;
 					}
-				.id { // wohoooo unicoooode!
+				.id { 
 					
 				}
 				.date {
@@ -196,13 +196,14 @@
 		/* Live Episodes */
 
 		#live-episodes {
+			margin-top: @line;
 			margin-bottom: 2*@line;
 		}
 
 		/* Planned Episodes from the future! */
 		
 		#planned-episodes {
-			margin-bottom: 2*@line;
+			margin-bottom: @line;
 		}
 
 		.episode-planned {
