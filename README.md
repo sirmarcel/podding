@@ -26,3 +26,7 @@ They might come in handy.
 	* padding
 	* anything else
 - .episode-list is a class for everything that is, well, an episode list.
+
+### Things I don't know how to solve nicely right now
+
+- Have a fixed sidebar that doesn't suck

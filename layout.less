@@ -21,8 +21,9 @@ html, body {
 	clear: both;
 	width: 100%;
 	margin: 0 auto;
+	overflow: visible;
 	#sidebar-content {
-		display: none;
+		
 	}
 	@media all and (min-width: @break1) {
 		position: absolute;
@@ -35,7 +36,7 @@ html, body {
 		}
 	}
 	@media all and (min-width: @break1) and (min-height: 500px) {
-		position: fixed;
+		//position: fixed;
 	}
 }
 
@@ -51,6 +52,8 @@ html, body {
 		clear: both;
 		margin: @line 0;
 }
+
+
 
 #content {
 	width: 100%;
