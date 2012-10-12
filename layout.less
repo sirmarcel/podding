@@ -17,28 +17,26 @@ html, body {
 	}
 }
 
-#sidebar {
+header, #sidebar {
 	clear: both;
 	width: 100%;
 	margin: 0 auto;
-	overflow: visible;
 	#sidebar-content {
 		
 	}
 	@media all and (min-width: @break1) {
-		position: absolute;
+		clear: none;
+		float: left;
 		width: 30%;
 		max-width: 340px;
-		float: left;
 		padding-right: 2.5%;
 		#sidebar-content {
 			display: block;
 		}
 	}
-	@media all and (min-width: @break1) and (min-height: 500px) {
-		//position: fixed;
-	}
 }
+
+
 
 	header {
 		text-align: center;

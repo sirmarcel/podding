@@ -5,7 +5,7 @@ html
 	body
 		#wrapper
 			
-			== slim :"includes/_sidebar"
+			== slim :"includes/_header"
 
 			#content.episode-list
 				#planned-episodes
@@ -92,8 +92,10 @@ html
 						img.icon-up src="images/icon-arrow-down.png" width="16px" height="16px" alt="weitere geplante folgen"
 						span href="" Weitere veröffentlichte Folgen
 
-				== slim :"includes/_footer"
-		
+				
+
+			== slim :"includes/_sidebar"
+
 						
 
 			

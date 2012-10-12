@@ -5,13 +5,13 @@ html
 	body
 		#wrapper
 			
-			== slim :"includes/_sidebar"
+			== slim :"includes/_header"
 
 			#content.text-content.single-page.page
 				h2.title: a.title-link href="" &Uuml;ber uns
 				== markdown :"includes/info"
 
-			
+			== slim :"includes/_sidebar"
 
 
 

@@ -73,15 +73,7 @@
 				}
 			}
 
-	/* Side bar */
-
-		#sidebar {
-			border: none;
-			@media all and (min-width: @break1) 	{
-			
-			}
-		}
-
+	/* Sidebar (which is the header and the actual sidebar) */
 		/* Site Header */
 
 		#site-title {
@@ -115,6 +107,17 @@
 				}
 			}
 		}
+
+		#sidebar {
+			border-top: 1px solid @sub;
+			padding-top: @line;
+			@media all and (min-width: @break1) 	{
+				border: none;
+				padding-top: 0;
+			}
+		}
+
+		
 
 		/* Footer */
 
@@ -158,7 +161,7 @@
 
 			.meta-info {
 				margin-left: 40px;
-				color: @sub;
+				color: @text-less;
 				a {
 						.hide-link;
 					}
