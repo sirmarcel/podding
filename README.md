@@ -25,3 +25,4 @@ They might come in handy.
 	* border
 	* padding
 	* anything else
+- .episode-list is a class for everything that is, well, an episode list.

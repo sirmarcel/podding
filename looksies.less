@@ -127,7 +127,24 @@
 			a { .hide-link; border-bottom: 1px solid; }
 		}
 
+
 	/* Podcast Episodes */
+	.episode-list {
+		.more-link {			
+				color: @text-less;
+				.hide-link-hardcore;
+				img {
+					float: left;
+				}
+				span {
+					margin-left: 24px;
+					color: @text-less;
+					&:hover {
+								color: @highlight2;
+							}
+				}
+		}
+	}
 
 	.episode {
 		margin-bottom: @line;
@@ -203,20 +220,6 @@
 				.meta-info {
 					font-size: 0.8rem;
 				}
-			}
-		}
-		.more-link-planned {			
-			color: @text-less;
-			.hide-link-hardcore;
-			img {
-				float: left;
-			}
-			span {
-				margin-left: 24px;
-				color: @text-less;
-				&:hover {
-							color: @highlight2;
-						}
 			}
 		}
 
