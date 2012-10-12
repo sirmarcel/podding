@@ -30,4 +30,4 @@ They might come in handy.
 ### Things I don't know how to solve nicely right now
 
 - Have a fixed sidebar that doesn't suck
-- Name sidebar and secondary (present naming sucks)
+
