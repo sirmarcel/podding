@@ -1,3 +1,5 @@
+/* General Layout (*salutes*) */
+
 html, body {
 	height: 100%;
 }
@@ -23,7 +25,7 @@ html, body {
 		display: none;
 	}
 	@media all and (min-width: @break1) {
-		position: fixed;
+		position: absolute;
 		width: 30%;
 		max-width: 340px;
 		float: left;
@@ -31,6 +33,9 @@ html, body {
 		#sidebar-content {
 			display: block;
 		}
+	}
+	@media all and (min-width: @break1) and (min-height: 500px) {
+		position: fixed;
 	}
 }
 
@@ -56,4 +61,15 @@ html, body {
 			margin-bottom: @line;
 		}
 	}
+}
+
+#footer {
+	width: 100%;
+	clear: both;
+}
+
+/* Now: Layouts for specific types of pages */
+
+.page {
+	margin-top: 2*@line;
 }

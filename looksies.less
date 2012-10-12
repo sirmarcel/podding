@@ -1,199 +1,226 @@
 /* Basic Styles (Colour, Type, etc.) */
 
-html {
-	font-style: "Helvetica Neue", Helvetica, serif;
-	font-size: @base-size;
-	line-height: @line;
-}
-
-body {
-	background-color: @bg;
-	color: @text; 
-}
-
-a {
-	text-decoration: none;
-	color: @highlight;
-	border-bottom: 1px solid @sub;
-	.candy-trans;
-	&:hover {
-		color: @highlight2;
-		border-color: @highlight2;
-		cursor: pointer;
-		
-	}
-	&:active {
-		color: desaturate(@highlight2, 30%);
+	html {
+		font-style: "Helvetica Neue", Helvetica, serif;
+		font-size: @base-size;
+		line-height: @line;
 	}
 
-	.text-content {
-		a:visited {
-			color: @highlight2;
-		}
+	body {
+		background-color: @bg;
+		color: @text; 
 	}
-}
 
-h1 {
-	margin: 0;
-	font-size: 3rem;
-	line-height: 4rem;
-}
-
-h2 {
-	margin: 0;
-	font-size: @line;
-	line-height: 2rem;
-}
-
-h3 {
-	margin: 0;
-}
-
-p {
-	margin: 0;
-}
-
-.text-content p {
-	margin-bottom: @line;
-}
-
-/* Side bar */
-
-#sidebar {
-	border: none;
-	@media all and (min-width: @break1) 	{
-	
-	}
-}
-
-/* Site Header */
-
-#site-title {
 	a {
-		color: @text;
-		.hide-link;
-	}	
-}
-
-#tagline {
-	font-size: 1.3rem;
-	font-style: italic;
-	@media all and (min-width: @break1) 	{
-		margin-left: 1rem;
-	}
-}
-
-/* Navigation */
-
-nav {
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		li {
-			display: inline;
-			font-size: 1.2rem;
-			margin-right: 0.5rem;
-			a {
-				border: none;
-			}
-		}
-	}
-}
-
-/* Podcast Episodes */
-
-.episode {
-	margin-bottom: @line;
-	.header {
-		margin-bottom: @line;
-		.episode-icon, .icon {
-			float: left;
-			width: 40px;
-			.hide-link-hardcore;
-		}
-		.title {
-			a {
-				border: none;
-				span {
-					color: @text;
-					&:after{ content: ": "}
-				}
-			}
-		}
-		.meta-info {
-			margin-left: 40px;
-			color: @sub;
-			a {
-					.hide-link;
-				}
-			.id { // wohoooo unicoooode!
-				
-			}
-			.date {
-				&:before{content: " \2014\2002 ";}
-			}
-			.crew {
-				&:before{content: " \2014\2002 Dabei: "}
-				a {
-					text-decoration: none;
-					color: @sub;
-					.itemized;
-					.hide-link;
-				}
-			}
-			.live-info {
-				&:before{content: " \2014\2002 ";}
-			}
-		}
-	}
-	.content {
-			margin-left: 40px;
-		}
-}
-	/* Live Episodes */
-
-	#live-episodes {
-		margin-bottom: 2*@line;
-	}
-
-	/* Planned Episodes from the future! */
-	
-	#planned-episodes {
-		margin-bottom: @line;
+		text-decoration: none;
+		color: @highlight;
 		border-bottom: 1px solid @sub;
+		.candy-trans;
+		&:hover {
+			color: @highlight2;
+			border-color: @highlight2;
+			cursor: pointer;
+			
+		}
+		&:active {
+			color: desaturate(@highlight2, 30%);
+		}
+
+		.text-content {
+			a:visited {
+				color: @highlight2;
+			}
+		}
 	}
 
-	.episode-planned {
-		.header {
-			.episode-icon {
-				
-			}
-			.title {
-				a { 
-					color: @highlight-less;
-					span { color: @text-less;}
-					&:hover {
-						color: @highlight2;
+	h1 {
+		margin: 0;
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: @line;
+		line-height: 2rem;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	.text-content h3 {
+		margin: @line auto @line 20px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.text-content p {
+		margin-bottom: @line;
+	}
+
+/* Generic Styles (stuff that reappears again and again) */
+
+	.title {
+				a {
+					border: none;
+					span {
+						color: @text;
+						&:after{ content: ": "}
 					}
 				}
 			}
-			.meta-info {
-				font-size: 0.8rem;
+
+	/* Side bar */
+
+		#sidebar {
+			border: none;
+			@media all and (min-width: @break1) 	{
+			
 			}
 		}
-	}
-	.more-link-planned {			
-		color: @text-less;
-		.hide-link-hardcore;
-		img {
-			float: left;
+
+		/* Site Header */
+
+		#site-title {
+			a {
+				color: @text;
+				.hide-link;
+			}	
 		}
-		span {
-			margin-left: 24px;
-			color: @text-less;
-			&:hover {
-						color: @highlight2;
+
+		#tagline {
+			font-size: 1.3rem;
+			font-style: italic;
+			@media all and (min-width: @break1) 	{
+				margin-left: 1rem;
+			}
+		}
+
+		/* Navigation */
+
+		nav {
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				li {
+					display: inline;
+					font-size: 1.2rem;
+					margin-right: 0.5rem;
+					a {
+						border: none;
 					}
+				}
+			}
 		}
+
+		/* Footer */
+
+		#footer {
+			margin-top: @line;
+			border-top: 1px solid @sub;
+			padding-bottom: @line;
+			font-size: 0.8rem;
+			color: @text-less;
+			a { .hide-link; border-bottom: 1px solid; }
+		}
+
+	/* Podcast Episodes */
+
+	.episode {
+		margin-bottom: @line;
+		.header {
+			margin-bottom: @line;
+			.episode-icon, .icon {
+				float: left;
+				width: 40px;
+				.hide-link-hardcore;
+			}
+
+			.meta-info {
+				margin-left: 40px;
+				color: @sub;
+				a {
+						.hide-link;
+					}
+				.id { // wohoooo unicoooode!
+					
+				}
+				.date {
+					&:before{content: " \2014\2002 ";}
+				}
+				.crew {
+					&:before{content: " \2014\2002 Dabei: "}
+					a {
+						text-decoration: none;
+						color: @sub;
+						.itemized;
+						.hide-link;
+					}
+				}
+				.live-info {
+					&:before{content: " \2014\2002 ";}
+				}
+			}
+		}
+		.content {
+				margin-left: 40px;
+			}
 	}
+		/* Live Episodes */
+
+		#live-episodes {
+			margin-bottom: 2*@line;
+		}
+
+		/* Planned Episodes from the future! */
+		
+		#planned-episodes {
+			margin-bottom: @line;
+			border-bottom: 1px solid @sub;
+		}
+
+		.episode-planned {
+			.header {
+				.episode-icon {
+					
+				}
+				.title {
+					a { 
+						color: @highlight-less;
+						span { color: @text-less;}
+						&:hover {
+							color: @highlight2;
+						}
+					}
+				}
+				.meta-info {
+					font-size: 0.8rem;
+				}
+			}
+		}
+		.more-link-planned {			
+			color: @text-less;
+			.hide-link-hardcore;
+			img {
+				float: left;
+			}
+			span {
+				margin-left: 24px;
+				color: @text-less;
+				&:hover {
+							color: @highlight2;
+						}
+			}
+		}
+
+/* Styles for specific pages / types of pages */
+
+.page {
+	.title {
+		margin-bottom: @line;
+	}
+}

@@ -11,3 +11,17 @@ to get everything working and
 	ruby podding.rb
 
 for testing (defaults to localhost:4567)
+
+
+### Random Notes
+
+They might come in handy.
+
+- .page is a general class for anything that is a page. ;) Jk, just use it for anything with a title and then some content.
+- I try to use this order for CSS:
+	* Width
+	* Height
+	* margin
+	* border
+	* padding
+	* anything else

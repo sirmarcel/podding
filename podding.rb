@@ -16,3 +16,10 @@ get '/style.css' do
 	less :style
 end
 
+get '/:name' do |n|
+	slim :"#{n}"
+end
+
+
+
+
