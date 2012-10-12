@@ -103,13 +103,12 @@
 
 		nav {
 			ul {
+				.inline-list;
 				margin: 0;
 				padding: 0;
-				list-style: none;
 				li {
 					display: inline;
 					font-size: 1.2rem;
-					margin-right: 0.5rem;
 					a {
 						border: none;
 					}
@@ -150,10 +149,14 @@
 					
 				}
 				.date {
-					&:before{content: " \2014\2002 ";}
+					.em-dashed;
 				}
 				.crew {
 					&:before{content: " \2014\2002 Dabei: "}
+					margin: 0;
+					padding: 0;
+					display: inline;
+					.inline-list;
 					a {
 						text-decoration: none;
 						color: @sub;
@@ -162,7 +165,7 @@
 					}
 				}
 				.live-info {
-					&:before{content: " \2014\2002 ";}
+					.em-dashed;
 				}
 			}
 		}
@@ -219,8 +222,56 @@
 
 /* Styles for specific pages / types of pages */
 
-.page {
-	.title {
-		margin-bottom: @line;
+	.page {
+		.title {
+			margin-bottom: @line;
+		}
 	}
-}
+
+	/* Crew Page */
+
+	.crew-member {
+		margin-bottom: 2*@line;
+		h4 {
+			margin: 0;
+			span {
+				.em-dashed;
+				font-style: italic;
+				color: @text-less;
+			}
+		}
+		img {
+			float: left;
+			width: 6*@line;
+			height: 6*@line;
+			margin: 0 @line @line 0;
+		}
+		.social-links {
+			margin: 0 0 @line 0;
+			.inline-list;
+			li {
+				.itemized;
+				a {
+					.hide-link;
+				}
+			}
+		}
+
+		.episode-links {
+			span {
+				float: left;
+			}
+			.episode-links-list {
+				display: inline;
+				.inline-list;
+				margin: 0;
+				padding-left: 10px;
+				li {
+					.itemized;
+					a {
+						color: @text;
+					}
+				}
+			}
+		}
+	}

@@ -1,4 +1,5 @@
 .itemized {
+	margin: 0;
 	&:after {content: ", "}
 	&:nth-last-child(2) { &:after { content:"";}}
 	&:last-child {
@@ -41,6 +42,17 @@
 					}
 }
 
+// Generic styling for lists that are displayed inline (like navigation, episode tags etc.)
+
+.inline-list {
+	list-style: none;
+	li {
+		display: inline;
+		margin-right: 0.5rem;
+	}
+}
+
+
 // Weird icon styles
 
 img.icon-play {
@@ -55,4 +67,10 @@ img.icon-up {
 img.icon-live {
 	margin-top: -1px;
 	margin-left: -7px;
+}
+
+// Add a space, an em-dash, another space before
+
+.em-dashed {
+	&:before{content: " \2014\2002 ";} // black unicode magic that annoys me deeply
 }
