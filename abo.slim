@@ -7,25 +7,34 @@ html
 			
 			== slim :"includes/_header"
 
-			#content.text-content.single-page.page
+			#content.text-content.page-single.page.page-abo
 				h2.title: a.title-link href="" Abonnieren
 				
-				table
+				table.feedtable
+					tr
+						td.label 
+						td.label Alle
+						td.label RTN
+						td.label RTC
+						td.label PP
 					tr
 						td.label aac
-						td RTN in aac
-						td RTC in aac
-						td PP in aac
+						td: a href='' alle in aac
+						td: a href='' RTN in aac
+						td: a href='' RTC in aac
+						td: a href='' PP in aac
 					tr
 						td.label mp3
-						td RTN in mp3
-						td RTC in mp3
-						td PP in mp3
+						td: a href='' alle in mp3
+						td: a href='' RTN in mp3
+						td: a href='' RTC in mp3
+						td: a href='' PP in mp3
 					tr
 						td.label opus
-						td RTN in opus
-						td RTC in opus
-						td PP in opus
+						td: a href='' alle in opus
+						td: a href='' RTN in opus
+						td: a href='' RTC in opus
+						td: a href='' PP in opus
 
 					  
 
