@@ -7,9 +7,12 @@ html
 			
 			== slim :"includes/_header"
 
-			#content.text-content.page-single.page
+			#content.page-single.page
 				h2.title: a.title-link href="" &Uuml;ber uns
-				== markdown :"includes/info"
+				
+				#page-content.text-content
+
+					== markdown :"includes/info"
 
 			== slim :"includes/_sidebar"
 

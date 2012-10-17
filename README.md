@@ -26,8 +26,11 @@ They might come in handy.
 	* padding
 	* anything else
 - .episode-list is a class for everything that is, well, an episode list.
+- #content is the wrapper everything that is not the sidebar, #page-content the one for "real" content
+
 
 ### Things I don't know how to solve nicely right now
 
 - Have a fixed sidebar that doesn't suck
+- Properly deal with automatic width (buttons, man)
 
