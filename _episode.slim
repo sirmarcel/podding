@@ -1,0 +1,19 @@
+div class=["episode","#{show}","status"]
+	.header
+		a.episode-icon 
+			img.icon-play src="images/icon-play.png" width="32px" height="32px"
+		h2.title: a.title-link href=""
+			| <span>#{show_title}</span> #{title}
+		.meta-info
+			span.id #{show}#{id}
+			span.date #{date}
+			ul.crew
+				a.crew-member href="" Phil
+				a.crew-member href="" Marcel
+				a.crew-member href="" Pfleidi
+				a.crew-member href="" Lukas
+	.content
+		div.desciption.text-content
+			== markdown :"episodes/001"
+			
+			a.more-link-text href="" Read on, my dear.
