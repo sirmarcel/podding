@@ -68,7 +68,8 @@
 
 	.title {
 		a {
-			border: none;
+			.hide-link;
+			color: @highlight;
 			span {
 				color: @text;
 				&:after{ content: ": "}
@@ -92,7 +93,7 @@
 			line-height: 2*@line;
 			font-style: italic;
 			@media all and (min-width: @break1) 	{
-				margin-left: 1rem;
+				
 			}
 		}
 
@@ -111,9 +112,29 @@
 					display: inline;
 					font-size: 1.2rem;
 					font-weight: 300;
+					line-height: @line;
+					i {
+						font-size: 18px;
+						
+						font-weight: 700;
+					}
 					a {
+						.link-icon-alt;
 						color: @bg;
 						border: none;
+						:hover {
+							color: @text;
+						}
+					}
+				}
+				@media all and (max-width: @break1) 	{
+					span > span {
+						display: none;
+					}
+				}
+				@media all and (max-width: @break2) 	{
+					span {
+						display: none;
 					}
 				}
 			}
@@ -145,7 +166,7 @@
 	/* Content */
 
 	#content {
-		border-top: 1px solid @sub;
+		
 	}
 
 	/* Podcast Episodes */
@@ -167,29 +188,34 @@
 	}
 
 	.episode {
+		padding-bottom: @line;
 		margin-bottom: @line;
+		overflow: hidden;
 		.header {
 			margin-bottom: @line;
 			.episode-icon, .icon {
 				float: left;
 				width: 40px;
-				.hide-link-hardcore;
+				height: @line;
+				font-size: 24px;
+				vertical-align: middle;
+				.link-icon;
 			}
 
 			.meta-info {
 				margin-left: 40px;
-				color: @text-less;
+				color: @text-even-less;
 				a {
-						.hide-link;
+					.hide-link;
+					margin-right: 0.5em;
 					}
 				.id { 
 					
 				}
 				.date {
-					.em-dashed;
+					
 				}
 				.crew {
-					&:before{content: " \2014\2002 Dabei: "}
 					margin: 0;
 					padding: 0;
 					display: inline;
@@ -199,49 +225,94 @@
 						color: @sub;
 						.itemized;
 						.hide-link;
+						&:first-child:after {
+							content: " ";
+						}
 					}
+
 				}
 				.live-info {
-					.em-dashed;
+					
 				}
 			}
 		}
 		.content {
 				margin-left: 40px;
 			}
+			.more-link-text {
+				.inline-icon;
+				.link-icon;
+				float: right;
+				color: @text;
+				border: none;
+			}
 	}
 		/* Live Episodes */
 
 		#live-episodes {
-			margin-top: @line;
-			margin-bottom: 2*@line;
+			margin-top: 2*@line;
 		}
 
 		/* Planned Episodes from the future! */
 		
 		#planned-episodes {
+			clear: both;
 			margin-bottom: @line;
-		}
-
-		.episode-planned {
-			.header {
-				.episode-icon {
-					
-				}
-				.title {
-					a { 
-						color: @highlight-less;
-						span { color: @text-less;}
-						&:hover {
-							color: @highlight2;
-						}
-					}
-				}
-				.meta-info {
-					font-size: 0.8rem;
-				}
+			overflow: hidden;
+			#planned-label {
+				width: 40px;
+				float: left;
+				color: @text;
+				i {font-size: 24px;vertical-align: middle;}
 			}
 		}
+
+		#planned-episodes-list {
+			float: left;
+			width: 90%;
+			@media all and (max-width: @break2) 	{ // prevent list from weird formatting on small screens
+				width: 85%;
+			}
+			margin: 0;
+			padding: 0;
+			.inline-list;
+			li {
+				float: left;
+				margin-right: 0.1em;
+				font-size: 1.2rem;
+				font-weight: 500;
+
+			}
+			
+			.episode-planned {
+				&:after {
+					content: " / ";
+					color: @text-less;
+					font-weight: 800;
+				}
+				a { 
+					color: @highlight-less;
+					span { color: @text-less;}
+					&:hover {
+						color: @highlight2;
+					}
+				}
+			}
+
+		.more-link {
+			.inline-icon;
+			color: @text-even-less;
+			padding-left: 0.2rem;
+			}
+		}
+
+		/* Published episodes */
+
+		.episode-published {
+			border-bottom: 1px solid @highlight;
+		}
+
+		
 
 /* Styles for specific pages / types of pages */
 

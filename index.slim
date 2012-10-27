@@ -9,42 +9,42 @@ html
 
 			#content.episode-list
 				#planned-episodes
-					a.more-link
-						img.icon-up src="images/icon-arrow-up.png" width="16px" height="16px" alt="weitere geplante folgen"
-						span href="" Weitere geplante Folgen
+					#planned-label
+						a.link-icon href="" 
+							|  <i class="icon-calendar"></i>
+					ul#planned-episodes-list
+						li.episode-planned.RTC.title
+							a.title-link href=""
+								| <span>12. Oktober</span>Retinacast
 
-					.episode.episode-planned.RTC
-						.header
-							a.episode-icon 
-								img.icon-calendar src="images/icon-calendar.png" width="16px" height="16px" alt="episode planned"
-							h3.title: a.title-link href=""
-								| <span>Geplant</span>Retinacast
-							p.meta-info
-								span.id RTC S02E01
-								span.date 12.10.2010
+						li.episode-planned.RTC.title
+							a.title-link href=""
+								| <span>10. Oktober</span>Pilotenpr&uuml;fung
 
-					.episode.episode-planned.PP
-						.header
-							a.episode-icon 
-								img.icon-calendar src="images/icon-calendar.png" width="16px" height="16px" alt="episode planned"
-							h3.title: a.title-link href=""
-								| <span>Geplant</span>Pilotenpr&uuml;fung
-							p.meta-info
-								span.id PP18
-								span.date 9.10.2010
+						li.more-link
+							a.link-icon href="" 
+								|  mehr... <i class="icon-circle-arrow-right"></i>
+
+				
+
+							
 				#live-episodes
 					.episode.episode-live.RTN
 						.header
-							a.episode-icon 
-								img.icon-live src="images/icon-live.png" width="32px" height="32px" alt="episode planned"
+							a.episode-icon.link-icon 
+								i.icon-bullhorn
 							h2.title: a.title-link href=""
 								| <span>Jetzt live</span>Retinauten
-							p.meta-info
-								span.id RTN002
-								span.date 7.10.2010 um 19.00 Uhr
-								span.live-info: a href="" Live-Stream
+							.meta-info
+								a.id.link-icon href=""
+									| <i class="icon-barcode"></i> RTN002
+								a.date.link-icon href=""
+									| <i class="icon-time"></i> 7.10.2010 ab 19.00 Uhr
+								a.live-info.link-icon href=""
+									| <i class="icon-link"></i> Live-Stream
 							
-				#published-episodes				
+				#published-episodes
+					== render_episode("002")				
 					== render_episode("001")
 
 					
