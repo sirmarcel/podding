@@ -99,15 +99,20 @@
 		/* Navigation */
 
 		nav {
-			height: @line;
+			height: 2*@line;
+			background-color: @highlight;
+			.bordered;
 			ul {
 				.inline-list;
 				margin: 0;
-				padding: 0;
+				padding: 0.5*@line 0;
+				text-align: center;
 				li {
 					display: inline;
 					font-size: 1.2rem;
+					font-weight: 300;
 					a {
+						color: @bg;
 						border: none;
 					}
 				}
@@ -136,6 +141,12 @@
 			a { .hide-link; border-bottom: 1px solid; }
 		}
 
+
+	/* Content */
+
+	#content {
+		border-top: 1px solid @sub;
+	}
 
 	/* Podcast Episodes */
 	.episode-list {

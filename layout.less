@@ -25,11 +25,10 @@ header, #sidebar {
 		
 	}
 	@media all and (min-width: @break1) {
-		clear: none;
-		float: left;
+		clear: both;
 		width: 30%;
 		max-width: 340px;
-		padding-right: 2.5%;
+		margin: 0 auto;
 		#sidebar-content {
 			display: block;
 		}
@@ -41,7 +40,7 @@ header, #sidebar {
 	header {
 		text-align: center;
 		@media all and (min-width: @break1) 	{
-			text-align: left;
+		
 		}
 		clear: both;
 	}
@@ -58,7 +57,7 @@ header, #sidebar {
 	padding-bottom: @line;
 	@media all and (min-width: @break1) 	{
 		width: 62.5%;
-		float: right;
+		margin: 0 auto;
 		.episode {
 			margin-bottom: @line;
 		}
