@@ -169,6 +169,19 @@
 		
 	}
 
+	#paging-links {
+		color: @text-less;
+		margin-bottom: 2*@line;
+		.link-older {
+			.inline-icon;
+			float: left;
+		}
+		.link-newer {
+			.inline-icon;
+			float: right;
+		}
+	}
+
 	/* Podcast Episodes */
 	.episode-list {
 		.more-link {			
@@ -243,7 +256,7 @@
 				.inline-icon;
 				.link-icon;
 				float: right;
-				color: @text;
+				color: @text-less;
 				border: none;
 			}
 	}
@@ -310,7 +323,11 @@
 
 		.episode-published {
 			border-bottom: 1px solid @highlight;
+			&:last-child {
+
+			}
 		}
+
 
 		
 

@@ -19,4 +19,5 @@ div class=["episode","#{show}","episode-#{status}"]
 		div.desciption.text-content
 			== render_markdown("episodes/#{show}-#{id}")
 			
-			a.more-link-text title="Link zu den Shownotes zu #{show_title}-#{title}" href="" Shownotes <i class="icon-circle-arrow-right"></i>
+			a.more-link-text title="Link zu den Shownotes zu #{show_title}-#{title}" href="" 
+				| <i class="icon-book"></i> Shownotes
