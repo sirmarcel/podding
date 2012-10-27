@@ -5,8 +5,8 @@ div class=["episode","#{show}","episode-#{status}"]
 		h2.title: a.title-link href=""
 			| <span>#{show_title}</span> #{title}
 		.meta-info
-			a.id.link-icon href=""
-				| <i class="icon-barcode"></i> #{show}#{id}
+			a.id.link-icon href="" title="ID der Sendung #{show_title}-#{title}"
+				| <i class="icon-barcode"></i> #{show} #{id}
 			a.date.link-icon href=""
 				| <i class="icon-time"></i> #{date}
 			ul.crew
@@ -17,6 +17,6 @@ div class=["episode","#{show}","episode-#{status}"]
 				a.crew-member href="" Lukas
 	.content
 		div.desciption.text-content
-			== render_markdown("episodes/001")
+			== render_markdown("episodes/#{show}-#{id}")
 			
-			a.more-link-text title="Link zu den Shownotes zu #{title}" href="" Shownotes <i class="icon-circle-arrow-right"></i>
+			a.more-link-text title="Link zu den Shownotes zu #{show_title}-#{title}" href="" Shownotes <i class="icon-circle-arrow-right"></i>

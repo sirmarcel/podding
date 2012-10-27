@@ -17,8 +17,9 @@ helpers do
   	path << '.yaml'
     file = File.read(path).force_encoding('UTF-8')
     lolcals = YAML.load(file)
-	  slim :"includes/_episode", :locals => lolcals
+	  slim :"includes/_episode-header", :locals => lolcals
   end
+
   def render_markdown(name)
     path = name
     path << '.markdown'
@@ -31,6 +32,8 @@ end
 get '/' do 
   slim :index
 end
+
+
 
 get '/test' do
 	slim :test
