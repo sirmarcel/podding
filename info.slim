@@ -8,9 +8,10 @@ html
 			== slim :"includes/_header"
 
 			#content.page-single.page
-				h2.title: a.title-link href="" &Uuml;ber uns
+				h2.page-title: a.title-link.link-icon href=""
+					| <i class="icon-book"></i> &Uuml;ber den Retinacast
 				
-				#page-content.text-content
+				#page-content.text-content-long
 
 					== markdown :"includes/info"
 

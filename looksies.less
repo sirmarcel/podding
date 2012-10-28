@@ -52,7 +52,7 @@
 		line-height: @line;
 	}
 
-	.text-content h3 {
+	.text-content h3, .text-content-long h3 {
 		margin: @line auto @line 20px;
 	}
 
@@ -60,8 +60,23 @@
 		margin: 0;
 	}
 
-	.text-content p {
-		margin-bottom: @line;
+	.text-content {
+		p {
+			text-indent: 1em;
+			margin-bottom: @line;
+			&:first-child {
+				text-indent: 0;
+			}
+		}
+
+		h3 + p {
+			text-indent: 0;
+		}
+	}
+
+	.text-content-long { // longer text wider than about 40 chars per line becomes uncomfortable to read
+		.text-content;
+		max-width: 600px;	
 	}
 
 /* Generic Styles (stuff that reappears again and again) */
@@ -333,12 +348,23 @@
 
 /* Styles for specific pages / types of pages */
 
-	.page {
-		.title {
-			margin-bottom: 1.5*@line;
+	.page-title {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1.5*@line;
+		a {
+			.hide-link;
+			
 		}
-
+		span {
+			.em-dashed;
+				font-size: 1.2rem;
+				font-style: italic;
+				color: @text-less;
+		}
 	}
+
+	
 
 	/* Crew Page */
 

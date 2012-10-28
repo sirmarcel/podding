@@ -8,15 +8,19 @@ html
 			== slim :"includes/_header"
 
 			#content.page-single.page.page-crew
-				h2.title: a.title-link href="" Crew
+				h2.page-title: a.title-link.link-icon href="" 
+				 | <i class="icon-group"></i> Crew <span>wer spricht hier?</span>
 				
 				.crew-member
 					img src="http://placekitten.com/900" 
 					h4 Marcel <span>one bad motherfucker</span>
 					ul.social-links
-						li: a href="" Twitter
-						li: a href="" Flattr
-						li: a href="" Blog
+						li: a href="" 
+							| <i class="icon-twitter"></i> Twitter
+						li: a href="" 
+							| <i class="icon-money"></i> Flattr
+						li: a href=""
+							| <i class="icon-link"></i> Blog
 					
 					.description.text-content
 						p The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And you will know My name is the Lord when I lay My vengeance upon thee.
@@ -29,7 +33,7 @@ html
 							li: a href="" RTN005
 							li: a href="" RTC S01E05: House
 							li: a href="" RTC S02E03: Inspector Spacetime
-							li.more-link: a href="" noch viele weitere
+							li.more-link.tooltip.tooltip-bottom: a href="" title="Archiv: Sendungen mit Marcel" data-tooltip="Archiv: Sendungen mit Marcel" noch viele weitere
 
 				.crew-member
 					img src="http://placekitten.com/500" 
