@@ -5,11 +5,11 @@ div class=["episode","#{show}","episode-#{status}"]
 		h2.title: a.title-link href=""
 			| <span>#{show_title}</span> #{title}
 		.meta-info
-			a.id.link-icon href="" title="ID der Sendung #{show_title}-#{title}"
+			a.id.link-icon.tooltip.tooltip-bottom href="" title="ID der Sendung #{show_title}: #{title}" data-tooltip="ID der Sendung #{show_title}: #{title}"
 				| <i class="icon-barcode"></i> #{show} #{id}
 			a.date.link-icon href=""
 				| <i class="icon-time"></i> #{date}
-			a.comments href=""
+			a.comments href="" title="Kommentare zu #{title}"
 			 	| <i class="icon-comments"></i> #{comments}
 			ul.crew
 				a.link-icon href="": i.icon-group
