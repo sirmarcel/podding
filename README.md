@@ -26,7 +26,7 @@ They might come in handy.
 	* padding
 	* anything else
 - .episode-list is a class for everything that is, well, an episode list.
-- #content is the wrapper everything that is not the sidebar, #page-content the one for "real" content
+- #content is the wrapper everything that is not the sidebar
 
 
 ### Things I don't know how to solve nicely right now

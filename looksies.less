@@ -85,10 +85,6 @@
 		a {
 			.hide-link;
 			color: @highlight;
-			span {
-				color: @text;
-				&:after{ content: ": "}
-			}
 		}
 	}
 
@@ -230,6 +226,10 @@
 				.link-icon;
 			}
 
+			.title-label {
+				color: @text;
+			}
+
 			.meta-info {
 				margin-left: 40px;
 				color: @text-even-less;
@@ -356,15 +356,25 @@
 			.hide-link;
 			
 		}
-		span {
-			.em-dashed;
-				font-size: 1.2rem;
-				font-style: italic;
-				color: @text-less;
+		span.quip {
+			font-size: 1.2rem;
 		}
+
+		span.title-label {
+			
+		}
+		
 	}
 
-	
+
+	/* Single Episode */
+
+	.single-episode {
+		
+		.episode {
+			border-bottom: none;
+		}
+	}
 
 	/* Crew Page */
 
