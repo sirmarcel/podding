@@ -1,3 +1,6 @@
+
+(merged into Podding at github.com/Podding/Podding)
+
 Hello there.
 
 Nothing to see here, move along.
